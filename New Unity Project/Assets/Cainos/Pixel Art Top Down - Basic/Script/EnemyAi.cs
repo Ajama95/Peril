@@ -18,44 +18,35 @@ public class EnemyAi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Patroling = true;
+         speed = 100f;
+    Patroling = true;
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Patroling)
-        {
-            Patrol();
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if(Patroling == true)
-        {
-            turn = !Physics2D.OverlapCircle(p1.position, 0.1f, groundlayer);
-        }
-    }
-
-    void Patrol()
-    {
-        if(turn)
-        {
-            flip();
-        }
         rb.velocity = new Vector2(speed * Time.fixedDeltaTime, rb.velocity.y);
-
-    }
-    void flip()
-    {   Patroling = false;
-        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-        speed *= -1;
-        Patroling = true;
     }
 
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "P1")
+        {
+            speed *= -1;
+        }
+        if (collision.tag == "P2")
+        {
+            speed *= -1;
+        }
+    }
+    
+        
+
+    }
+    
 
 
 
-}
+

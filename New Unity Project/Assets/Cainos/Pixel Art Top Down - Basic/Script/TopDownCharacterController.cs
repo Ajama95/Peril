@@ -16,6 +16,8 @@ namespace Cainos.PixelArtTopDown_Basic
         Rigidbody2D rb;
         private int Direction;
         private float moveX;
+        public Transform teleport;
+        public Transform teleport2;
         private void Start()
         {
             animator = GetComponent<Animator>();
@@ -26,7 +28,8 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private void Update()
         {
-            Dashmanager();
+            
+            
             ScoreDebuff = GetComponent<Score>().sscore;
 
             Vector2 dir = Vector2.zero;
@@ -70,8 +73,8 @@ namespace Cainos.PixelArtTopDown_Basic
                     speed = 4f;
                     break;
 
-                case 2:
-                    speed = 1f;
+                case 4:
+                    speed = 4f;
                     break;
 
                 case 3:
@@ -83,11 +86,20 @@ namespace Cainos.PixelArtTopDown_Basic
 
 
         }
-
-        private void Dashmanager()
+        private void OnCollisionEnter2D(Collision2D collision)
         {
+            if (collision.gameObject.tag == "Teleport")
+            {
+                this.transform.position = teleport.position;
 
+            }
+            if (collision.gameObject.tag == "Teleport2")
+            {
+                this.transform.position = teleport2.position;
+
+            }
         }
+
 
     }
 

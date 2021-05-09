@@ -6,7 +6,7 @@ public class Banking : MonoBehaviour
 {
     public float GameScore = 0;
     public float Multiplyer = 0;
-    public float BankedScore = 0;
+    static public float BankedScore = 0;
     public float PScore;
     // Start is called before the first frame update
     void Start()

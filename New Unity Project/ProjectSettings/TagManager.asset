@@ -7,6 +7,10 @@ TagManager:
   - Chest
   - Bank
   - P1
+  - P2
+  - Ghost
+  - Teleport
+  - Teleport2
   layers:
   - Default
   - TransparentFX
