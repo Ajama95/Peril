@@ -49,7 +49,7 @@ public class Banking : MonoBehaviour
         }
         if (Ps >= 5)        ///multiplyer starts kickking in when player has 3 coins minimum
         {
-            Multiplyer = 1.5f;
+            Multiplyer = 2f;
         }
         BankedScore = GameScore * Multiplyer;
         Debug.Log(BankedScore);

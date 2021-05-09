@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Peril/Scenes/MainMenu.unity
+    guid: 46582c7ceb668bd43a98d6c8284c50e7
+  - enabled: 1
     path: Assets/Scenes/Peril/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Peril/Scenes/Final.unity
-    guid: 86e89bd9e4a9c5245a015cf17e3c0aae
+    guid: c7dd1d1e5cc6fe24cb13de2cd1cd76de
+  - enabled: 1
+    path: Assets/Scenes/Peril/Scenes/Pause Menu.unity
+    guid: fbfb974802cf55846aed8f1c4a2d6f59
   m_configObjects: {}
